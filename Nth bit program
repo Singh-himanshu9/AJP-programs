@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Bitposition {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        System.out.print("Enter the bit position (1-based index): ");
+        int n = sc.nextInt();
+
+        int new_num = num >> (n - 1);
+        if ((new_num & 1) == 1) {
+            System.out.println("The " + n + "th bit is set.");
+        } else {
+            System.out.println("The " + n + "th bit is not set.");
+        }
+    }
+}
